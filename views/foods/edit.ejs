@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+    
     hi
+    <form action="/users/<%= user._id %>/pantry/<%= food._id %>" method="POST">
+        <!-- Include the necessary method override -->
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit">Delete</button>
+      </form>
 </body>
 </html>

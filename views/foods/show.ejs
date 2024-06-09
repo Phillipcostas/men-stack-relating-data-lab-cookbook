@@ -3,9 +3,7 @@
     <h1>
         <%= pantry.name %>
       </h1>
-      <a href="/users/<%= user._id %>/pantry/<%= pantry._id %>/edit">
-        Edit Food
-      </a>
+      <a href="/users/<%= user._id %>/pantry/<%= food._id %>/edit">Edit</a>
       <form action="/users/<%= user._id %>/pantry/<%= pantry._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete Food</button>
       </form>

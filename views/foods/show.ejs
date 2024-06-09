@@ -1,10 +1,12 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>
-        <%= pantry.name %>
+        <%= foods.name %>
       </h1>
-      <a href="/users/<%= user._id %>/pantry/<%= food._id %>/edit">Edit</a>
-      <form action="/users/<%= user._id %>/pantry/<%= pantry._id %>?_method=DELETE" method="POST">
+      <p>
+      </p>
+      <a href="/users/<%= user._id %>/pantry/<%= foods._id %>/edit">Edit</a>
+      <form action="/users/<%= user._id %>/pantry/<%= foods._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete Food</button>
       </form>
 </body>

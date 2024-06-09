@@ -35,9 +35,11 @@ router.post('/', async (req, res) => {
     }
 })
 
-router.get('/:userId/pantry/:foodId/edit', async (req, res) => {
+router.get('/pantry/:foodId/edit', async (req, res) => {
   try {
+    console.log(res.locals.user)
     const currentUser = await User.findById(req.session.user._id);
+    console.log(currentUser)
     const pantry = currentUser.pantry.id(req.params.foodId);
     console.log(currentUser.pantry)
     res.render('foods/show.ejs', {

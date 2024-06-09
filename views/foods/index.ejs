@@ -13,7 +13,8 @@
     <ul>
       <% pantry.forEach((pantry) => { %>
         <li>
-          <a href="/users/<%= user._id %>/pantry/<%= pantry._id %>">
+     
+          <a href="/users/<%= user._id %>/foods/pantry/<%= pantry._id %>/edit">
             <%= pantry.name %>
           </a>
         </li>

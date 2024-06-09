@@ -8,14 +8,12 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add New Items to your Pantry: </h1>
-    <form action="/users/<%= user._id %>/foods" method="POST">
+      <form action="/users/<%= user._id %>/foods" method="POST">
 
         <label for="name">Food Item:</label>
-        <input type="text" name="food" id="food" required />
+        <input type="text" name="name" id="food" required />
         
         <button type="submit">Add Food</button>
       </form>
-
-    </form>
   </body>
 </html>

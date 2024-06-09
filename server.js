@@ -43,6 +43,20 @@ app.get('/', (req, res) => {
   });
 });
 
+// app.get('/users/:userId/foods', async (req, res) => {
+//   console.log('Route triggered');
+//   try {
+//     const currentUser = await User.findById(req.params.userId);
+//     res.render('foods/index.ejs', {
+//       user: currentUser,
+//       pantry: currentUser.pantry,
+//     });
+//   } catch (error) {
+//     console.log(error);
+//     res.redirect('/');
+//   }
+// });
+
 app.get('/vip-lounge', (req, res) => {
   if (req.session.user) {
     res.send(`Welcome to the party ${req.session.user.username}.`);
@@ -55,7 +69,7 @@ app.get('/vip-lounge', (req, res) => {
 app.use(passUserToView)
 app.use('/auth', authController);
 app.use(isSignedIn);
-app.use('/users/:userID/foods', foodsController);
+app.use('/users/:userId/foods', foodsController);
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);

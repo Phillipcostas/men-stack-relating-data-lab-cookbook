@@ -6,10 +6,6 @@ const foodSchema = new mongoose.Schema({
     required: true,
     
   },
-  id: {
-    type: String,
-    required: true,
-  }
 })
 
 const userSchema = mongoose.Schema({

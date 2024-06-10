@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Editing <%= foods.name %> </title>
 </head>
 <body>
-    
-    hi
-    <form action="/users/<%= user._id %>/pantry/<%= food._id %>" method="POST">
-        <!-- Include the necessary method override -->
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>
+        <%= foods.name %>
+        <input type="checkbox">
+        
+      </h1>
+      <form action="/users/<%= user._id %>/foods/pantry/<%= foods._id %>?_method=DELETE" method="POST">
         <input type="hidden" name="_method" value="DELETE">
         <button type="submit">Delete</button>
+    </form>
+
+        <form action="/users/<%= user._id %>/foods/pantry/<%= foods._id %>?_method=PUT" method="PUT">
+            <input type="hidden" name="_method" value="PUT">
+            <button type="submit">update</button>
+        </form>
+     
       </form>
+     
 </body>
 </html>

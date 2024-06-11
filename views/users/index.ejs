@@ -7,10 +7,16 @@
 </head>
 <body>
     <p>Community Page</p>
+   
     <ul>
-        <% users.forEach(function(user) { %>
-            <%- include('user/show', {user: user}; %>)
-        <% }) %>
-    </ul>
+        <% users.forEach((user) => { %>
+          <li>
+            <%= user.name %>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+            <!-- <a href="/users/<%= user._id %>/foods/pantry/<%= pantry._id %>/edit"> -->
+           
 </body>
 </html>

@@ -4,8 +4,8 @@ const router = express.Router();
 const User = require('../models/user.js');
 
 
-router.get('/index', async (req, res) => {
-    const users = await User.find()
+router.get('/', async (req, res) => {
+    const user = await User.find()
     res.render('users/index.ejs')
 });
 

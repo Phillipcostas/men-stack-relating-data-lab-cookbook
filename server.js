@@ -44,19 +44,6 @@ app.get('/', (req, res) => {
   });
 });
 
-// app.get('/users/:userId/foods', async (req, res) => {
-//   console.log('Route triggered');
-//   try {
-//     const currentUser = await User.findById(req.params.userId);
-//     res.render('foods/index.ejs', {
-//       user: currentUser,
-//       pantry: currentUser.pantry,
-//     });
-//   } catch (error) {
-//     console.log(error);
-//     res.redirect('/');
-//   }
-// });
 
 app.get('/vip-lounge', (req, res) => {
   if (req.session.user) {

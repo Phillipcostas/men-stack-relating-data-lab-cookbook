@@ -6,17 +6,17 @@
     <title>Community page</title>
 </head>
 <body>
+  <% include('../partials/_navbar.ejs') %>
     <p>Community Page</p>
    
     <ul>
-        <% users.forEach((user) => { %>
+        <% user.forEach((user) => { %>
           <li>
             <%= user.name %>
-        </a>
       </li>
     <% }) %>
   </ul>
-            <!-- <a href="/users/<%= user._id %>/foods/pantry/<%= pantry._id %>/edit"> -->
+          
            
 </body>
 </html>
